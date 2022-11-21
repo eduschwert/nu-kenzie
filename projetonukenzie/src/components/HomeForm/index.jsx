@@ -4,10 +4,11 @@ import { useState } from "react"
 
 import "./style.css"
 
-const HomeForm = ({ valuesList, setValuesList, filter, setListFilter }) => {
+const HomeForm = ({ valuesList, setValuesList, valuesListFiltered }) => {
   const [description, setDescription] = useState("")
   const [value, setValue] = useState("")
   const [valueType, setValueType] = useState("Entrada")
+  const [counter, setCounter] = useState(0)
 
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -17,26 +18,20 @@ const HomeForm = ({ valuesList, setValuesList, filter, setListFilter }) => {
             description,
             value: +value,
             valueType,
+            id: counter,
           }
         : {
             description,
             value: -value,
             valueType,
+            id: counter,
           }
-    setValuesList((previousList) => {
-      const newList = [...previousList, newTransation]
-      if (filter === "Todos") {
-        setListFilter(newList)
-      } else {
-        setListFilter(
-          newList.filter((transation) => transation.valueType === filter)
-        )
-      }
-      return newList
-    })
+    setValuesList((previousList) => [...previousList, newTransation])
 
     setDescription("")
     setValue("")
+
+    setCounter(counter + 1)
   }
 
   return (

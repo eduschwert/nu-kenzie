@@ -13,21 +13,25 @@ import "./style.css"
 
 const Home = ({ setPage }) => {
   const [valuesList, setValuesList] = useState([])
-  const [listFilter, setListFilter] = useState([])
   const [filter, setFilter] = useState("Todos")
 
+  const valuesListFiltered = valuesList.filter((transation) =>
+    filter === "Todos" ? true : transation.valueType === filter
+  )
+
   let divTotalMoney, divCard
-  if (valuesList.length !== 0) {
-    divTotalMoney = <TotalMoney listFilter={listFilter} />
+  if (valuesListFiltered.length) {
+    divTotalMoney = <TotalMoney valuesListFiltered={valuesListFiltered} />
 
     divCard = (
       <Card
         valuesList={valuesList}
         setValuesList={setValuesList}
-        listFilter={listFilter}
-        setListFilter={setListFilter}
+        valuesListFiltered={valuesListFiltered}
       />
     )
+  } else if (valuesList.length !== 0) {
+    divCard = <EmptyList text={`Você não possui nenhuma ${filter}`} />
   } else {
     divTotalMoney = <div></div>
     divCard = <EmptyList />
@@ -41,18 +45,12 @@ const Home = ({ setPage }) => {
             <HomeForm
               valuesList={valuesList}
               setValuesList={setValuesList}
-              filter={filter}
-              setListFilter={setListFilter}
+              valuesListFiltered={valuesListFiltered}
             />
             {divTotalMoney}
           </div>
           <div className="flex flex-col  gap-15r desk-home-card">
-            <CardFilter
-              valuesList={valuesList}
-              setListFilter={setListFilter}
-              filter={filter}
-              setFilter={setFilter}
-            />
+            <CardFilter filter={filter} setFilter={setFilter} />
             {divCard}
           </div>
         </main>

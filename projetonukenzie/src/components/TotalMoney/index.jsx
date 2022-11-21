@@ -2,8 +2,8 @@ import React from "react"
 
 import "./style.css"
 
-const TotalMoney = ({ listFilter }) => {
-  const sum = listFilter.reduce(
+const TotalMoney = ({ valuesListFiltered }) => {
+  const sum = valuesListFiltered.reduce(
     (previous, current) => previous + current.value,
     0
   )
