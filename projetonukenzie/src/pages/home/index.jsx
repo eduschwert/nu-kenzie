@@ -49,7 +49,7 @@ const Home = ({ setPage }) => {
             />
             {divTotalMoney}
           </div>
-          <div className="flex flex-col  gap-15r desk-home-card">
+          <div className="flex flex-col align-center gap-15r desk-home-card">
             <CardFilter filter={filter} setFilter={setFilter} />
             {divCard}
           </div>

@@ -52,19 +52,13 @@
 }
 
 .btn-trash {
-  border: none;
-  background: none;
-}
-.btn-trash img {
   width: 1.375rem;
   height: 1.375rem;
+  border: none;
+  background-image: url("../assets/trashDefault.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
-.btn-trash-hover {
-  display: none;
-}
-.btn-trash:hover .btn-trash-default {
-  display: none;
-}
-.btn-trash:hover .btn-trash-hover {
-  display: block;
+.btn-trash:hover {
+  background-image: url("../assets/trashHover.svg");
 }

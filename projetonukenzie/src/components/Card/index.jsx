@@ -25,7 +25,9 @@ const Card = ({ valuesList, setValuesList, valuesListFiltered }) => {
                     {transationFilter.description}
                   </span>
                   <div className="flex align-center gap-1688r">
-                    <span className="regular size-075r color-grey-4">{`R$ ${transationFilter.value},00`}</span>
+                    <span className="regular size-075r color-grey-4">{`R$ ${transationFilter.value
+                      .toString()
+                      .replace("-", "")},00`}</span>
                     <button
                       onClick={() =>
                         setValuesList(
@@ -36,18 +38,7 @@ const Card = ({ valuesList, setValuesList, valuesListFiltered }) => {
                         )
                       }
                       className="btn btn-trash"
-                    >
-                      <img
-                        className="btn-trash-default"
-                        src={TrashImg}
-                        alt="Trash"
-                      />
-                      <img
-                        className="btn-trash-hover"
-                        src={TrashImgHover}
-                        alt="Trash"
-                      />
-                    </button>
+                    ></button>
                   </div>
                 </div>
                 <p className="regular size-075r color-grey-4">
