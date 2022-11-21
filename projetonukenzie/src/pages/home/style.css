@@ -1,0 +1,24 @@
+.home-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3.625rem;
+}
+
+@media (min-width: 76.375rem) {
+  .desk-home-form-button {
+    flex-direction: row !important;
+  }
+}
+
+@media (min-width: 60.125rem) {
+  .home-main {
+    flex-direction: row !important;
+  }
+  .desk-home-form {
+    width: 50%;
+  }
+  .desk-home-card {
+    width: 50%;
+  }
+}

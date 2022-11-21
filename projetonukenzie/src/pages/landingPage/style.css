@@ -1,0 +1,35 @@
+.landingPage-bg {
+  background-color: var(--color-grey-4);
+}
+
+.landingPage-main {
+  padding: 1rem 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+
+  gap: 3rem;
+}
+
+.landing-page-btn {
+  width: 15.063rem;
+}
+
+.landingPage-img {
+  max-width: 100%;
+}
+
+@media (min-width: 56.75rem) {
+  .container {
+    padding: 0 6.25rem;
+  }
+
+  .landingPage-main {
+    padding: 0;
+    flex-direction: row !important;
+  }
+}
