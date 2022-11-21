@@ -23,11 +23,11 @@
 .gap-225r {
   gap: 2.25rem;
 }
-.gap-1688r {
-  gap: 1.688rem;
-}
 .gap-175r {
   gap: 1.75rem;
+}
+.gap-1688r {
+  gap: 1.688rem;
 }
 .gap-15r {
   gap: 1.5rem;
@@ -72,5 +72,6 @@
 @media (min-width: 23.75rem) {
   .desk-home-filter-buttons {
     flex-direction: row !important;
+    gap: 0 !important;
   }
 }

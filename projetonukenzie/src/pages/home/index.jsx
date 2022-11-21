@@ -31,7 +31,15 @@ const Home = ({ setPage }) => {
       />
     )
   } else if (valuesList.length !== 0) {
-    divCard = <EmptyList text={`Você não possui nenhuma ${filter}`} />
+    divCard = (
+      <EmptyList
+        text={
+          filter === "Entrada"
+            ? `Você não possui nenhuma entrada`
+            : "Você não possui nenhuma saída"
+        }
+      />
+    )
   } else {
     divTotalMoney = <div></div>
     divCard = <EmptyList />

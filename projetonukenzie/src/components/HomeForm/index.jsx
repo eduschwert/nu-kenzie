@@ -78,7 +78,7 @@ const HomeForm = ({ valuesList, setValuesList, valuesListFiltered }) => {
               id="inputValueType"
             >
               <option value="Entrada">Entrada</option>
-              <option value="Saida">Saída</option>
+              <option value="Despesa">Despesa</option>
             </select>
           </div>
           <div className="flex flex-col gap-0563r"></div>
