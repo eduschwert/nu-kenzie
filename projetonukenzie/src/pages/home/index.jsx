@@ -1,7 +1,5 @@
 import React from "react"
 
-import { useState } from "react"
-
 import Header from "../../components/Header"
 import HomeForm from "../../components/HomeForm"
 import TotalMoney from "../../components/TotalMoney"
@@ -11,10 +9,7 @@ import CardFilter from "../../components/CardFilter"
 
 import "./style.css"
 
-const Home = ({ setPage }) => {
-  const [valuesList, setValuesList] = useState([])
-  const [filter, setFilter] = useState("Todos")
-
+const Home = ({ setPage, valuesList, setValuesList, filter, setFilter }) => {
   const valuesListFiltered = valuesList.filter((transation) =>
     filter === "Todos" ? true : transation.valueType === filter
   )
@@ -36,7 +31,7 @@ const Home = ({ setPage }) => {
         text={
           filter === "Entrada"
             ? `Você não possui nenhuma entrada`
-            : "Você não possui nenhuma saída"
+            : "Você não possui nenhuma despesa"
         }
       />
     )
