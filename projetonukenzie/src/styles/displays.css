@@ -42,3 +42,35 @@
 .w-full {
   width: 100%;
 }
+
+@media (min-width: 56.75rem) {
+  .container {
+    padding: 0 6.25rem;
+  }
+
+  .landingPage-main {
+    padding: 0;
+    flex-direction: row !important;
+  }
+  .home-main {
+    flex-direction: row !important;
+  }
+  .desk-home-form {
+    width: 50%;
+  }
+  .desk-home-card {
+    width: 50%;
+  }
+}
+
+@media (min-width: 76.375rem) {
+  .desk-home-form-button {
+    flex-direction: row !important;
+  }
+}
+
+@media (min-width: 23.75rem) {
+  .desk-home-filter-buttons {
+    flex-direction: row !important;
+  }
+}

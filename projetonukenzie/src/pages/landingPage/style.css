@@ -22,14 +22,3 @@
 .landingPage-img {
   max-width: 100%;
 }
-
-@media (min-width: 56.75rem) {
-  .container {
-    padding: 0 6.25rem;
-  }
-
-  .landingPage-main {
-    padding: 0;
-    flex-direction: row !important;
-  }
-}

@@ -2,9 +2,6 @@ import React from "react"
 
 import "./style.css"
 
-import TrashImg from "../../assets/trashDefault.svg"
-import TrashImgHover from "../../assets/trashHover.svg"
-
 const Card = ({ valuesList, setValuesList, valuesListFiltered }) => {
   return (
     <ul className="cards-list">
