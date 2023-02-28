@@ -1,5 +1,7 @@
 <h1 align="center">Nu Kenzie</h1>
 
+<p align="center"><img width="700" alt="ilustração" src="./src/assets/project-illustration.gif"/></p>
+
 <h3 align="center">Controle seus gastos com praticidade e facilidade.</h3>
 
 <h4 align="center">Status do projeto: 🚧   Concluído 🚀 🚧</h4>
@@ -21,10 +23,10 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
 
 ```bash
 # Clone este repositório
-$ git clone <git@github.com:eduschwert/hamburgueria-da-kenzie.git>
+$ git clone <git@github.com:eduschwert/nu-kenzie.git>
 
 # Acesse a pasta do projeto no terminal/cmd
-$ cd hamburgueria-da-kenzie
+$ cd nu-kenzie
 
 # Instale as dependências
 $ yarn install
